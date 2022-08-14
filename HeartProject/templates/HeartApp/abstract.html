@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Heart Disease Identification</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"crossorigin="anonymous">
+    <style media="screen">
+      body{
+        background:url("https://images.newscientist.com/wp-content/uploads/2021/06/30120824/01-july_mini-heart.jpg");
+        background-repeat:no-repeat;
+        background-size:cover;
+      }
+      .container{
+         margin-top:100px;
+         width:800px;
+      }
+     p{
+       padding:5px;
+     }
+     h2{
+       text-align:center;
+     }
+     #upload{
+       background:grey;
+     }
+     h1{
+       background:yellow;
+     }
+     input{
+       margin-top:55px;
+     }
+    </style>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       <script src="http://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <script>
+    $(document).ready(function(){
+       alert("Login Successful")
+     });
+     </script>
+     <div class="container" style="border:1px solid black;background:grey;">
+        <h2>Abstract</h2>
+        <p style="font-size:15px;">
+          Heart disease (HD) is the critical health issue and numerous people have been suffered by this disease around the world.  In this article, we proposed an efficient and accurate system to diagnosis heart disease and the system is based on machine learning techniques. The effective diagnosis and proper treatment can save the lives of many people. The results obtained from this diagnosis method are not accurate in identifying the patient of HD  and it  is expensive and computationally difficult to analyze.</p>
+
+  <p>To solve the above issues system is developed based on classification algorithms that includes Support vector machine, Logistic regression, Artificial neural network, K-nearest neighbor, Naïve bays, and Decision tree while standard features selection algorithms have been used such as Relief, Minimal redundancy maximal relevance, least absolute shrinkage selection operator and Local learning for removing irrelevant and redundant features</p>
+  <p>The novelty of the study is developing a diagnosis system for identification of heart disease. Machine learning classifiers include LR, K-NN, ANN, SVM, NB, and DT are used in the designing of the system. The experimental results show that the proposed feature selection algorithm (FCMIM) is feasible with classifier support vector machine for designing a high-level intelligent system to identify heart disease. In the future, we can use other features selection algorithms, optimization methods to further increase the performance of a predictive system for HD diagnosis.</p>
+     </div>
+     <form method="post">
+       <input id="upload" type="submit" class="btn btn-primary btn-lg" value="Upload">
+       {%csrf_token%}
+     </form>
+  </body>
+</html>

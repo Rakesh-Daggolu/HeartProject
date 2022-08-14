@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+    body{
+       text-align:center;
+       background:url("https://news.yale.edu/sites/default/files/styles/featured_media/public/adobestock_106920026_ynews.jpeg?itok=5LQzYoPw&c=07307e7d6a991172b9f808eb83b18804");
+    }
+
+    </style>
+  </head>
+  <body>
+    <script>$(document).ready(function(){
+     {%if b%}
+        {%if lable%}
+         alert("you have heart disease, please contact doctor immediately: {{lable}}")
+        {%else%}
+        alert("you dont have heart disease: {{lable}}")
+        {%endif%}
+     {%endif%}
+ });
+       </script>
+
+
+        <div class="container" style="margin-right:80px ; text-align:center">
+          <div class="jumbotron" style="background:">
+            <form  method="post">
+              {{form.as_p}}
+              {%csrf_token%}
+             <input  type='submit' name='Submit' class='btn btn-primary btn-lg'>
+            </form>
+         </div>
+       </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+     <script type="text/javascript" src="{%static 'js/demojs.js'%}">
+  </body>
+</html>

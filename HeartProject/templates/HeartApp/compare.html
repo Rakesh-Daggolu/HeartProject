@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>compare page</title>
+    <style media="screen">
+      td{
+        color:white;
+        background:blue;
+      }
+      th{
+        color:white;
+        background:black;
+      }
+      body{
+        background:url("https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/247/247837/diagram-graphic-of-the-human-heart.jpg?w=1155&h=1297");
+        background-repeat:no-repeat;
+        background-size:cover;
+      }
+    </style>
+  </head>
+  <body>
+    {%if l%}
+    <div class="container" style="margin-right:80px ; text-align:center">
+      <div class="jumbotron" style="padding-top:240px;">
+    <table border='1px' style='padding:1px;border-collapse:collapse;' align='center'>
+      <th>Classifier</th>
+      <th>Accuracy</th>
+      <th>Sensitivity</th>
+      <th>Specificity</th>
+      <th>Precision</th>
+      {%for row in l%}
+      <tr>
+        {%for col in row%}
+         <td>{{col}}</td>
+        {%endfor%}
+      </tr>
+      {%endfor%}
+    </table>
+  </div>
+  </div>
+    {%endif%}
+  </body>
+</html>

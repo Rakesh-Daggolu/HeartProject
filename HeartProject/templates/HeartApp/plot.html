@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"crossorigin="anonymous">
+    <title>Train Set Page</title>
+    <style media="screen">
+      body{
+        text-align:center;
+      }
+      td,th{
+        padding:2px;
+        align:center;
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="{%static 'correlationmatrix.png'%}" alt="image not found">
+    {%if matrix_results%}
+      <table border='1px' style="border-collapse:collapse;" align='center'>
+        <th>row</th>
+        <th>column1</th>
+        <th>positive correlation</th>
+        <th>column2</th>
+        <th>negative correlation</th>
+        {%for row in matrix_results%}
+           <tr>
+             {%for col in row%}
+               <td>{{col}}</td>
+             {%endfor%}
+           </tr>
+        {%endfor%}
+      </table>
+    {%endif%}
+    <br>
+    
+    <a href="/preprocess" target="_blank"><input type="submit" name="" value="Preprocessed Info" class='btn btn-primary btn-lg'></a>
+
+  </body>
+</html>

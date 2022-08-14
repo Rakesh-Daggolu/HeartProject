@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"crossorigin="anonymous">
+    <style media="screen">
+      body{
+        text-align:center;
+      }
+      td{
+        padding:1px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="{%static 'img/statistic.png'%}" alt="image not found">
+    <br>
+    {%if data%}
+      <table border='1px' style="border-collapse:collapse;" align='center'>
+      {%for l in data%}
+      <tr>
+         {%for x in l%}
+          <td>{{x}}</td>
+         {%endfor%}
+      </tr>
+      {%endfor%}
+      </table>
+    {%endif%}
+    <br><br>
+    <form method="post">
+      {%csrf_token%}
+      <button type="submit" class="btn btn-primary btn-lg">Click to train/test</button>
+    </form>
+  </body>
+</html>

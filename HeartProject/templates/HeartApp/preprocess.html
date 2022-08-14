@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"crossorigin="anonymous">
+    <title>Train Set Page</title>
+    <title>preprocessed info</title>
+    <style>
+      body,th{
+        text-align:center;
+      }
+    td,th{
+      padding:1px;
+    }
+   </style>
+  </head>
+  <body>
+    {%if normalized_data%}
+    <table border='1px' style="border-collapse:collapse;" align='center'>
+    <th>Age</th>
+    <th>Sex</th>
+    <th>Cp</th>
+    <th>Trestbps</th>
+    <th>Chol</th>
+    <th>Fbs</th>
+    <th>Restecg</th>
+    <th>Thalach</th>
+    <th>Exang</th>
+    <th>Oldpeak</th>
+    <th>Slope</th>
+    <th>Ca</th>
+    <th>Thal</th>
+    {%for l in normalized_data%}
+    <tr>
+       {%for x in l%}
+        <td>{{x}}</td>
+       {%endfor%}
+    </tr>
+    {%endfor%}
+    </table>
+  {%endif%}
+  <br><br>
+  <br>
+  <img src="{%static 'histogram.png'%}" alt="image not found">
+  <br>
+  <a href="/without_feature_selection" target="_blank"><input type="submit" name="" value="WithoutFeatureSelection" class="btn btn-primary btn-lg"></a>
+  <a href="/fcmim" target="_blank"><input type="submit" name="" value="Fcmim" class='btn btn-primary btn-lg'></a>
+  <a href="/relif" target="_blank"><input type="submit" name="" value="Relif" class='btn btn-primary btn-lg'></a>
+  <a href="/mrmr" target="_blank"><input type="submit" name="" value="Mrmr" class='btn btn-primary btn-lg'></a>
+  </body>
+</html>

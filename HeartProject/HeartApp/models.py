@@ -1,0 +1,25 @@
+from django.db import models
+
+# Create your models here.
+class Heart(models.Model):
+    age=models.IntegerField()
+    STATUS_CHOICES=((1,'Male-1'),(0,'Female-0'))
+    sex=models.IntegerField(choices=STATUS_CHOICES,default='Male-1')
+    STATUS_CHOICES1=((0,'Atypical angina-0'),(1,'Typical angina-1'),(2,'Asymptomatic-2'),(3,'Non-anginal pain-3'))
+    cp=models.IntegerField(choices=STATUS_CHOICES1,default='Atypical angina-0')
+    trestbps=models.IntegerField()
+    chol=models.IntegerField()
+    STATUS_CHOICES2=((1,'True- 1'),(0,'False- 0'))
+    fbs=models.IntegerField(choices=STATUS_CHOICES2,default='False- 0')
+    STATUS_CHOICES3=((0,'Normal- 0'),(1,'ST- 1'),(2,'Hypertrophy- 2'))
+    restecg=models.IntegerField(choices=STATUS_CHOICES3,default='Normal')
+    thalach=models.IntegerField()
+    STATUS_CHOICES4=((0,'Yes- 0'),(1,'No- 1'))
+    exang=models.IntegerField(choices=STATUS_CHOICES4,default='No- 1')
+    oldpeak=models.FloatField()
+    STATUS_CHOICES5=((0,'Up Sloping- 0'),(1,'Flat- 1'),(2,'Down Sloping- 2'))
+    slope=models.IntegerField(choices=STATUS_CHOICES5,default='Up Sloping- 0')
+    ca=models.FloatField()
+    #STATUS_CHOICES6=((3,'Normal'),(6,'Fixed Defect'),(7,'Reversible Defect'))
+    thal=models.IntegerField()
+    target=models.IntegerField()

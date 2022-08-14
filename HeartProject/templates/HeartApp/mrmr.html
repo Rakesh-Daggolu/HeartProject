@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>mrmr</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"crossorigin="anonymous">
+    <style media="screen">
+      body{
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Selected features are</h1>
+    {%for x in col%}
+      <h3>{{x}}</h3>
+    {%endfor%}
+    <a href="/compare" target="_blank"><input type="submit" name="" value="compare" class='btn btn-primary btn-lg'></a>
+    <a href="/svc" target="_blank"><input type="submit" name="" value="SVC" class='btn btn-primary btn-lg'></a>
+    <a href="/knn" target="_blank"><input type="submit" name="" value="KNN" class='btn btn-primary btn-lg'></a>
+    <a href="/lr" target="_blank"><input type="submit" name="" value="LR" class='btn btn-primary btn-lg'></a>
+    <a href="/nb" target="_blank"><input type="submit" name="" value="NB" class='btn btn-primary btn-lg'></a>
+    <a href="/dt" target="_blank"><input type="submit" name="" value="DT" class='btn btn-primary btn-lg'></a>
+    <a href="/ann" target="_blank"><input type="submit" name="" value="ANN" class='btn btn-primary btn-lg'></a>
+  </body>
+</html>

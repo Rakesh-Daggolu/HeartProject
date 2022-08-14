@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Heart Disease Identification</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href={%static "css/main.css"%}>
+    <style media="screen">
+      body{
+      background:url("{%static 'img/doctor8.jpeg'%}") fixed center;
+      /*background:url("https://st.depositphotos.com/1017986/2730/i/950/depositphotos_27309251-stock-photo-attractive-female-doctor.jpg");*/
+      background-repeat:no-repeat;
+      background-size:cover;
+      /*background-size:100% 900px;*/
+    }
+    #heading{
+      padding-top:150px;
+      color:white;
+      font-size:40px;
+      text-align:center;
+    }
+    .container{
+      margin: 0;
+      float:left;
+    }
+    h1{
+      margin:1px;
+      font-family:Cursive;
+      font-size:80px;
+    }
+    h3{
+      color:RGBA(255,255,255,0.7);
+    }
+    a{
+    color:black;
+    }
+    </style>
+  </head>
+  <body>
+    <h3>Heart Disease idenfication</h3>
+      <div id="heading">
+       <h1>Heart Disease</h1>
+       <h1>Identification</h1>
+     </div>
+       <div class="continer" style="float:right;">
+          <h4 class="panel-title" style = "position:relative;bottom:500px;">
+            <a data-toggle="collapse" href="#collapse1" class="nav">
+              <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            </a>
+          </h4>
+        <div id="collapse1" class="panel-collapse collapse" style = "position:relative; bottom:500px;">
+          <p><a href="\accounts\login\">Login</a></p>
+        </div>
+      </div>
+
+  </body>
+</html>
